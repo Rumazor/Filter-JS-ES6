@@ -4,12 +4,10 @@ const input = document.querySelector('.search-input')
 
 
 
-
-
-
 let newProducts = [...products];
 
 function displayProducs(){
+    
     // If statement
     if(newProducts.length < 1) {
         productsContainer.innerHTML = `<h4>Sorry, no products matched your search </h4>` ;
@@ -23,13 +21,16 @@ return `<article class="product" data-id="${id}">
         <img src="${image}" alt="" class="product-img img">
         <footer>
         <h5 class="product-name">${title}</h5>
-        <span class="product-price">${price}$</span>
+        <span class="product-price">$${price}</span>
         </footer>
         </article>`
     }).join('')
+
 }
 
+
 displayProducs()
+
 
 form.addEventListener('keyup', ()=>{
     const inputValue = input.value;
@@ -68,4 +69,3 @@ companiesDOM.addEventListener('click',(e)=>{
         displayProducs()
     }
 })
-
