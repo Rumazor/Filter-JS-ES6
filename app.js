@@ -35,7 +35,7 @@ displayProducs()
 form.addEventListener('keyup', ()=>{
     const inputValue = input.value;
     newProducts = products.filter((product) => {
-        return product.title.toLowerCase().includes(inputValue)
+        return product.title.toLowerCase().includes(inputValue.toLowerCase())
     })
     displayProducs()
 })
